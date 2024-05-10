@@ -141,16 +141,27 @@ e.g. kubectl get pod facctlist-frontend-deployment-69745f5b47-5vw46 -o yaml
 #### Some of the most commonly used kubectl commands include:
 
 ```kubectl get:``` Retrieve information about resources (pods, deployments, services, etc.).
+
 ```kubectl create:``` Create a new resource from a file or stdin.
+
 ```kubectl apply:``` Apply a configuration to a resource.
+
 ```kubectl describe:``` Show detailed information about a resource.
+
 ```kubectl logs:``` Print the logs for a container in a pod.
+
 ```kubectl exec:``` Execute a command in a container.
+
 ```kubectl delete:``` Delete resources by filenames, stdin, resources, and names, or by resources and label selector.
+
 ```kubectl rollout:``` Manage the rollout of a resource (e.g., deployments).
+
 ```kubectl scale:``` Change the number of replicas of a resource.
+
 ```kubectl port-forward:``` Forward one or more local ports to a pod.
+
 ```kubectl get events:``` Display events related to resources.
+
 ```kubectl top:``` Display Resource (CPU/Memory/Storage) usage.
 
 ```kubectl create``` is a command used to create a resource by specifying the resource type and configuration through either a file or directly in the command.
