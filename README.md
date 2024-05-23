@@ -205,6 +205,8 @@ https://komodor.com/learn/kubectl-scale-deployment-the-basics-and-a-quick-tutori
 kubectl get deploy -n <facctlist-dev>   [ facctlist-dev is namaespace ]
 ```
 
+Stop the deployed container instances:
+
 ```sh
 kubectl scale deploy <facctlist-backend-deployment> -n <facctlist-dev> --replicas=0
 ```
