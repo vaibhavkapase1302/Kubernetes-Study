@@ -196,8 +196,7 @@ kubectl edit configmap facctguard-config
 kubectl delete configmap facctguard-config
 ```
 
-To scale down pod
-
+**To scale down pod**
 https://komodor.com/learn/kubectl-scale-deployment-the-basics-and-a-quick-tutorial/
 
 ```sh
