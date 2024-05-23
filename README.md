@@ -168,4 +168,60 @@ e.g. kubectl get pod facctlist-frontend-deployment-69745f5b47-5vw46 -o yaml
 
 For example, you can use ```kubectl create -f deployment.yaml``` to create a deployment using the configuration defined in the **deployment.yaml** file. Alternatively, you can use ```kubectl create deployment my-deployment --image=my-image``` to create a deployment named my-deployment using the **my-image** Docker image.
 
+Create a config map
 
+```sh
+kubectl apply -f tools/facctguard/facctguard-ui/ --namespace=facctguard
+```
+
+kubectl ```create configmap``` with the ```--from-file```
+
+```sh
+kubectl create configmap <facctguard-config> --from-file=<facctguard-config.yaml>
+```
+
+```sh
+kubectl describe configmap <facctguard-config>
+```
+
+```sh
+kubectl apply -f <facctguard-ui> --namespace=<facctguard>
+```
+
+```sh
+kubectl edit configmap facctguard-config
+```
+
+```sh
+kubectl delete configmap facctguard-config
+```
+
+To scale down pod
+
+```sh
+kubectl get deploy -n <facctlist-dev>   [ facctlist-dev is namaespace ]
+```
+
+```sh
+kubectl scale deploy <facctlist-backend-deployment> -n <facctlist-dev> --replicas=0
+```
+
+```sh
+kubectl get pods -n facctlist-dev
+```
+
+```sh
+kubectl get pods -n facctlist-dev -w
+```
+
+```sh
+kubectl scale deploy facctlist-backend-deployment -n facctlist-dev --replicas=1
+```
+
+```sh
+kubectl get pods -n facctlist-dev -w
+```
+
+```sh
+kubectl get pods -n facctlist-dev
+```
