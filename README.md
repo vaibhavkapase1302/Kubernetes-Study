@@ -228,3 +228,7 @@ kubectl get pods -n facctlist-dev -w
 ```sh
 kubectl get pods -n facctlist-dev
 ```
+
+When you scale your deployments to zero (0), this operation effectively stops the component or application. You scale the deployment back to your original number to restart the component or application.
+
+end
