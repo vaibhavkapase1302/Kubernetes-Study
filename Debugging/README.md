@@ -15,9 +15,11 @@ https://stackoverflow.com/questions/64299456/kubernetes-error-from-server-notfou
 
 #### Multiple Methods are there:-
 **1. Using **restart** command- kubectl rollout restart**
+
 ```kubectl rollout restart deployment <deployment_name> -n <namespace>```
 
 **2. kubectl scale:**
+
 ```kubectl scale deployment <deployment name> -n <namespace> --replicas=0```
 
 ```kubectl scale deployment <deployment name> -n <namespace> --replicas=3```
