@@ -47,3 +47,9 @@ kubectl rollout status deployment facctguard-frontend-deployment -n facctguard
 ```
 output:
 **deployment "facctguard-frontend-deployment" successfully rolled out**
+
+**Rollout History:** To view the history of deployments
+
+```bash
+kubectl rollout history deployment <DEPLOYMENT_NAME>
+```
