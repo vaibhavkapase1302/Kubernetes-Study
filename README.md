@@ -262,13 +262,21 @@ When you scale your deployments to zero (0), this operation effectively stops th
 kubectl get deployment -n <namespace-name>
 ```
 
+output: 
+
 ```
 NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
 facctguard-frontend-deployment   1/1     1            1           6d5h
 ```
 
-output: 
+```bash
+kubectl delete deployment <deployment-name> -n <namespace-name>
 
+e.g. 
+
+```bash
+kubectl delete deployment facctguard-frontend-deployment -n facctguard
+```
 
 ```bash
 kubectl delete deployment <DEPLOYMENT_NAME>
