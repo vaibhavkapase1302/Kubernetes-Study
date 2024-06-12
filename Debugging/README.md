@@ -1,11 +1,13 @@
-Task 1: Getting the **CreateContainerConfigError** error
+### Task 1: Getting the **CreateContainerConfigError** error
 
 https://spacelift.io/blog/createcontainerconfigerror
 
 https://stackoverflow.com/questions/50424754/pod-status-as-createcontainerconfigerror-in-minikube-cluster
 
+### Task 2: Getting the **ImagePullBackOff** error
 
-Task 2: How to Restart the pod
+
+### Task 3: How to Restart the pod
 
 https://spacelift.io/blog/restart-kubernetes-pods-with-kubectl
 
