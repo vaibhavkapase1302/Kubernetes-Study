@@ -236,7 +236,7 @@ https://komodor.com/learn/kubectl-scale-deployment-the-basics-and-a-quick-tutori
 kubectl get deploy -n <facctlist-dev>   [ facctlist-dev is namaespace ]
 ```
 
-Stop the deployed container instances:
+**Stop the deployed container instances:**
 
 ```sh
 kubectl scale deploy <facctlist-backend-deployment> -n <facctlist-dev> --replicas=0
@@ -247,15 +247,7 @@ kubectl get pods -n facctlist-dev
 ```
 
 ```sh
-kubectl get pods -n facctlist-dev -w
-```
-
-```sh
 kubectl scale deploy facctlist-backend-deployment -n facctlist-dev --replicas=1
-```
-
-```sh
-kubectl get pods -n facctlist-dev -w
 ```
 
 ```sh
@@ -264,16 +256,36 @@ kubectl get pods -n facctlist-dev
 
 When you scale your deployments to zero (0), this operation effectively stops the component or application. You scale the deployment back to your original number to restart the component or application.
 
+**Delete Deployment: To delete a deployment:**
+
+```bash 
+kubectl get deployment -n <namespace-name>
+```
+
+```
+NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+facctguard-frontend-deployment   1/1     1            1           6d5h
+```
+
+output: 
+
+
+```bash
+kubectl delete deployment <DEPLOYMENT_NAME>
+```
+
+
 # AWS EKS Cluster Setup and Management
 
 ## Setting Up Your Environment
 
 ### Verify kubectl Installation
+
 ```bash
 kubectl version --client
 ```
 
-Verify eksctl Installation
+**Verify eksctl Installation**
 
 ```bash
 eksctl version
@@ -306,23 +318,26 @@ eksctl create cluster \
     --nodes 2
 ```
 
-OR in windows
+**OR in windows**
 
 ```batch
 eksctl create cluster --name my-eks-cluster --region ap-south-1 --nodegroup-name ng-1 --node-type t2.micro --nodes 2
 ```
 
 **Verify Cluster Creation**
+
 ```bash
 kubectl config current-context
 ```
 
 **Verify Cluster Creation: Check the status of your EKS cluster.**
+
 ```bash
 eksctl get cluster --name my-eks-cluster --region ap-south-1
 ```
 
 **Configure kubectl to Use Your EKS Cluster:**
+
 e.g. 
 ```bash
 aws eks update-kubeconfig --name facctum-dev-eks-cluster --profile dev-profile
@@ -332,12 +347,13 @@ aws eks update-kubeconfig --name facctum-dev-eks-cluster --profile dev-profile
 aws eks --region ap-south-1 update-kubeconfig --name my-eks-cluster --profile learning
 ```
 
-Verify Connection to Your EKS Cluster
+**Verify Connection to Your EKS Cluster**
+
 ```bash
 kubectl get nodes
 ```
 
-Verify Connection to Your EKS Cluster
+**Verify Connection to Your EKS Cluster**
 
 ```bash
 kubectl get componentstatus
