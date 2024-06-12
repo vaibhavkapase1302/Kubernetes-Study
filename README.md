@@ -49,10 +49,18 @@ AWS sso login
 aws sso login 
 ```
 
+```sh
+aws sso login --profile dev-profile
+```
+
 updates the local kubeconfig file with the configuration needed to access an Amazon EKS cluster named “facctum-dev-eks-cluster" 
 
 ```sh
 aws eks update-kubeconfig --name facctum-dev-eks-cluster 
+```
+
+```sh
+aws eks update-kubeconfig --name facctum-dev-eks-cluster --profile dev-profile
 ```
  
 Lists all pods in the current namespace 
@@ -85,6 +93,16 @@ kubectl logs -n <namespace> <pod-name>
 
 ```sh
 e.g. kubectl logs -n facctlist-dev -f facctlist-frontend-deployment-7486c5f47-srx92 
+```
+
+For checking the description of pod
+
+```sh
+kubectl describe pod <pod name> -n <namespace-name>
+```
+
+```sh
+kubectl describe pod admin-portal-frontend-64d46d5b65-kfm2p -n adminportal
 ```
 
 ### More kubectl commands 
