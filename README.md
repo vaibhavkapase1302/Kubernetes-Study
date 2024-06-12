@@ -312,19 +312,17 @@ OR in windows
 eksctl create cluster --name my-eks-cluster --region ap-south-1 --nodegroup-name ng-1 --node-type t2.micro --nodes 2
 ```
 
-Verify Cluster Creation
+**Verify Cluster Creation**
 ```bash
 kubectl config current-context
 ```
 
-- Verify Cluster Creation: Check the status of your EKS cluster.
-
+**Verify Cluster Creation: Check the status of your EKS cluster.**
 ```bash
 eksctl get cluster --name my-eks-cluster --region ap-south-1
 ```
 
-Configure kubectl to Use Your EKS Cluster:
-
+**Configure kubectl to Use Your EKS Cluster:**
 e.g. 
 ```bash
 aws eks update-kubeconfig --name facctum-dev-eks-cluster --profile dev-profile
