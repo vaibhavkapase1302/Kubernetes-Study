@@ -251,4 +251,86 @@ kubectl get pods -n facctlist-dev
 
 When you scale your deployments to zero (0), this operation effectively stops the component or application. You scale the deployment back to your original number to restart the component or application.
 
-end
+# AWS EKS Cluster Setup and Management
+
+## Setting Up Your Environment
+
+### Verify kubectl Installation
+```bash
+kubectl version --client
+```
+
+Verify eksctl Installation
+
+```bash
+eksctl version
+```
+
+## Creating an EKS Cluster Using eksctl
+
+### Create an EKS Cluster with Specified Parameters
+
+```bash
+eksctl create cluster \
+    --name <cluster-name> \
+    --region <region> \
+    --nodegroup-name <nodegroup-name> \
+    --node-type <instance-type> \
+    --nodes <number-of-nodes> \
+    --nodes-min <min-nodes> \
+    --nodes-max <max-nodes> \
+    --ssh-access \
+    --ssh-public-key <path-to-ssh-public-key>
+```
+
+e.g. 
+```bash 
+eksctl create cluster \
+    --name my-eks-cluster \
+    --region ap-south-1 \
+    --nodegroup-name ng-1 \
+    --node-type t2.micro \
+    --nodes 2
+```
+
+OR in windows
+
+```batch
+eksctl create cluster --name my-eks-cluster --region ap-south-1 --nodegroup-name ng-1 --node-type t2.micro --nodes 2
+```
+
+Verify Cluster Creation
+```bash
+kubectl config current-context
+```
+
+- Verify Cluster Creation: Check the status of your EKS cluster.
+
+```bash
+eksctl get cluster --name my-eks-cluster --region ap-south-1
+```
+
+Configure kubectl to Use Your EKS Cluster:
+
+e.g. 
+```bash
+aws eks update-kubeconfig --name facctum-dev-eks-cluster --profile dev-profile
+```
+
+```bash
+aws eks --region ap-south-1 update-kubeconfig --name my-eks-cluster --profile learning
+```
+
+Verify Connection to Your EKS Cluster
+```bash
+kubectl get nodes
+```
+
+Verify Connection to Your EKS Cluster
+
+```bash
+kubectl get componentstatus
+```
+
+
+end!!
