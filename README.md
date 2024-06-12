@@ -186,11 +186,13 @@ e.g. kubectl get pod facctlist-frontend-deployment-69745f5b47-5vw46 -o yaml
 
 For example, you can use ```kubectl create -f deployment.yaml``` to create a deployment using the configuration defined in the **deployment.yaml** file. Alternatively, you can use ```kubectl create deployment my-deployment --image=my-image``` to create a deployment named my-deployment using the **my-image** Docker image.
 
-Create a config map
-
 ```sh
 kubectl apply -f tools/facctguard/facctguard-ui/ --namespace=facctguard
 ```
+
+#### Create a config map
+
+**Create ConfigMap from File**
 
 kubectl ```create configmap``` with the ```--from-file```
 
@@ -198,17 +200,25 @@ kubectl ```create configmap``` with the ```--from-file```
 kubectl create configmap <facctguard-config> --from-file=<facctguard-config.yaml>
 ```
 
+**View ConfigMap Details**
+
 ```sh
 kubectl describe configmap <facctguard-config>
 ```
+
+**Apply ConfigMap**
 
 ```sh
 kubectl apply -f <facctguard-ui> --namespace=<facctguard>
 ```
 
+**Edit ConfigMap**
+
 ```sh
 kubectl edit configmap facctguard-config
 ```
+
+**Delete ConfigMap**
 
 ```sh
 kubectl delete configmap facctguard-config
