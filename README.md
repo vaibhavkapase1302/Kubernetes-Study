@@ -26,24 +26,25 @@
 Install and Set Up kubectl on Windows Docs:- 
 [https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 
-Install kubectl binary with curl on Windows  
+**Install kubectl binary with curl on Windows** 
 
 ```sh
 curl.exe -LO https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe
 ```
 
-Check version: 
+**Check version**
+
 ```sh
 kubectl version –client
 ```
 
-Set up AWS Profile: 
+**Set up AWS Profile:** 
 
 ```sh
 SET AWS_PROFILE=FacctumSSMAccess-223530587197 >  --for AWS Development a/c 
 ```
 
-AWS sso login 
+**AWS sso login**
 
 ```sh
 aws sso login 
@@ -53,7 +54,7 @@ aws sso login
 aws sso login --profile dev-profile
 ```
 
-updates the local kubeconfig file with the configuration needed to access an Amazon EKS cluster named “facctum-dev-eks-cluster" 
+**updates the local kubeconfig file with the configuration needed to access an Amazon EKS cluster named “facctum-dev-eks-cluster"** 
 
 ```sh
 aws eks update-kubeconfig --name facctum-dev-eks-cluster 
@@ -63,19 +64,19 @@ aws eks update-kubeconfig --name facctum-dev-eks-cluster
 aws eks update-kubeconfig --name facctum-dev-eks-cluster --profile dev-profile
 ```
  
-Lists all pods in the current namespace 
+**Lists all pods in the current namespace**
 
 ```sh '
 kubectl get nodes 
 ```
 
-Lists all namespaces in the cluster 
+**Lists all namespaces in the cluster** 
 
 ```sh
 kubectl get ns  
 ```
 
-list of all pods in the “facctlist-dev” namespace 
+**list of all pods in the “facctlist-dev” namespace** 
 
 ```sh
 kubectl get pods -n <pod name>
@@ -85,7 +86,7 @@ kubectl get pods -n <pod name>
 e.g. kubectl get pods -n facctlist-dev 
 ```
 
-streams the logs for the pod facctlist-frontend-deployment-7486c5f47-srx92 in the facctlist-dev namespace 
+**streams the logs for the pod facctlist-frontend-deployment-7486c5f47-srx92 in the facctlist-dev namespace** 
 
 ```sh
 kubectl logs -n <namespace> <pod-name> 
@@ -95,7 +96,7 @@ kubectl logs -n <namespace> <pod-name>
 e.g. kubectl logs -n facctlist-dev -f facctlist-frontend-deployment-7486c5f47-srx92 
 ```
 
-For checking the description of pod
+**For checking the description of pod**
 
 ```sh
 kubectl describe pod <pod name> -n <namespace-name>
@@ -110,43 +111,43 @@ kubectl describe pod admin-portal-frontend-64d46d5b65-kfm2p -n adminportal
 https://kubernetes.io/docs/reference/kubectl/quick-reference/ 
 
 
-Lists all configmaps in the current namespace. 
+**Lists all configmaps in the current namespace.**
 
 ```sh
 kubectl get configmaps  
 ```
 
-Lists all secrets in the current namespace. 
+**Lists all secrets in the current namespace.**
 
 ```sh
 kubectl get secrets 
 ```
  
-Show Merged kubeconfig settings 
+**Show Merged kubeconfig settings** 
 
 ```sh
 kubectl config view > 
 ```
  
-Show Merged kubeconfig settings 
+**Show Merged kubeconfig settings** 
 
 ```sh
 kubectl explain pods 
 ```
  
-List all services in the namespace 
+**List all services in the namespace** 
 
 ```sh
 kubectl get services
 ```
 
-List all pods in all namespaces 
+**List all pods in all namespaces** 
 
 ```sh
 kubectl get pods --all-namespaces  
 ```
 
-Get a pod's YAML 
+**Get a pod's YAML** 
 
 ```sh
 kubectl get pod <pod name>-o yaml
