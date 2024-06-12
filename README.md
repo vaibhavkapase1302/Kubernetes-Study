@@ -271,6 +271,7 @@ facctguard-frontend-deployment   1/1     1            1           6d5h
 
 ```bash
 kubectl delete deployment <deployment-name> -n <namespace-name>
+```
 
 e.g. 
 
