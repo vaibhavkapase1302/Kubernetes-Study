@@ -225,6 +225,9 @@ kubectl delete configmap facctguard-config
 ```
 
 **To scale down pod:**
+
+https://spacelift.io/blog/restart-kubernetes-pods-with-kubectl
+
 https://komodor.com/learn/kubectl-scale-deployment-the-basics-and-a-quick-tutorial/
 
 ```kubectl scale deployment``` command to adjust the number of pods in a Deployment.
