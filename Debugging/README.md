@@ -34,5 +34,14 @@ Multiple Methods are there:-
 ```kubectl get pod <pod_name> -n <namespace> -o yaml | kubectl replace --force -f -```
 
 
+Rollout Status
+```bash
+kubectl rollout status deployment <DEPLOYMENT_NAME>
+```
 
+e.g.
+```bash
+kubectl rollout status deployment facctguard-frontend-deployment -n facctguard
+```
 
+deployment "facctguard-frontend-deployment" successfully rolled out
