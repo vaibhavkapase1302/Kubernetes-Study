@@ -147,6 +147,19 @@ kubectl get services
 kubectl get pods --all-namespaces  
 ```
 
+command lists detailed information about each node in the Kubernetes cluster, including internal and external IPs, OS image, kernel version, and container runtime.
+
+```sh
+kubectl get nodes -o wide
+```
+
+out:
+
+NAME               STATUS   ROLES    AGE     VERSION   INTERNAL-IP     EXTERNAL-IP     OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+ip-192-168-1-1     Ready    <none>   3d      v1.21.1   192.168.1.1     203.0.113.1     Ubuntu 20.04.2 LTS   5.4.0-1037-aws      docker://19.3.12
+ip-192-168-1-2     Ready    <none>   3d      v1.21.1   192.168.1.2     <none>          Ubuntu 20.04.2 LTS   5.4.0-1037-aws      docker://19.3.12
+
+
 **Get a pod's YAML** 
 
 ```sh
