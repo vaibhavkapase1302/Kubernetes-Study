@@ -208,6 +208,14 @@ kubectl apply -f tools/facctguard/facctguard-ui/ --namespace=facctguard
 
 #### Create a config map
 
+**Create ConfigMap locally**
+
+```sh
+vi facctview-backend-config.yaml
+cat facctview-backend-config.yaml
+kubectl apply -f facctview-backend-config.yaml
+```
+
 **Create ConfigMap from File**
 
 kubectl ```create configmap``` with the ```--from-file```
