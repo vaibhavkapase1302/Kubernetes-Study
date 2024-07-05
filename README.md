@@ -169,7 +169,9 @@ kubectl get pod <pod name>-o yaml
 ``` 
 
 ```sh
-e.g. kubectl get pod facctlist-frontend-deployment-69745f5b47-5vw46 -o yaml 
+e.g. kubectl get pod facctlist-frontend-deployment-69745f5b47-5vw46 -o yaml
+
+e.g. kubectl get deploy facctlist-backend-deployment -n facctlist -o yaml
 ```
  
 #### Some of the most commonly used kubectl commands include:
