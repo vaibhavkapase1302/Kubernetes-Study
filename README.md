@@ -307,6 +307,25 @@ kubectl delete deployment facctguard-frontend-deployment -n facctguard
 kubectl delete deployment <DEPLOYMENT_NAME>
 ```
 
+**To Create a Service Account for K8S**
+
+vi facctlist-backend-service-account.yml
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::223530587197:role/facctlist_pod_iam_role
+  name: factlist-s3-access
+  namespace: facctlist
+```
+
+**name: factlist-s3-access**
+
+```sh
+kubectl apply -f facctlist-backend-service-account.yml
+```
 
 # AWS EKS Cluster Setup and Management
 
