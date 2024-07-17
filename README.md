@@ -112,6 +112,12 @@ kubectl describe pod admin-portal-frontend-64d46d5b65-kfm2p -n adminportal
 kubectl get events -n namespace
 ```
 
+**Port forwarding: Forward one or more local ports to a pod.**
+
+```sh
+kubectl port-forward  <pod-name> <local-port>:<pod-port>
+```
+
 ### More kubectl commands 
 
 https://kubernetes.io/docs/reference/kubectl/quick-reference/ 
