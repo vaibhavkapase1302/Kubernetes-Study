@@ -115,7 +115,7 @@ kubectl get events -n namespace
 **Port forwarding: Forward one or more local ports to a pod.**
 
 ```sh
-kubectl port-forward  <pod-name> <local-port>:<pod-port>
+kubectl port-forward <pod-name> <local-port>:<pod-port>
 ```
 
 ### More kubectl commands 
