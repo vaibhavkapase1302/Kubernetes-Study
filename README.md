@@ -106,6 +106,12 @@ kubectl describe pod <pod name> -n <namespace-name>
 kubectl describe pod admin-portal-frontend-64d46d5b65-kfm2p -n adminportal
 ```
 
+**To check recent events:**
+
+```sh
+kubectl get events -n namespace
+```
+
 ### More kubectl commands 
 
 https://kubernetes.io/docs/reference/kubectl/quick-reference/ 
