@@ -214,6 +214,68 @@ e.g. kubectl get deploy facctlist-backend-deployment -n facctlist -o yaml
 
 ```kubectl create``` is a command used to create a resource by specifying the resource type and configuration through either a file or directly in the command.
 
+### aliases for some frequently used commands
+
+```alias```: Displays all current aliases
+
+To create a alias command:
+
+```sh
+alias kt=kubectl
+complete -F __start_kubectl kc
+```
+
+For shell bash
+
+echo 'alias kt=kubectl' >>~/.bashrc **(add alias to shell)**
+
+echo 'source <(kubectl completion bash)' >>~/.bashrc **(add completion)**
+
+echo 'complete -F __start_kubectl k' >>~/.bashrc **(make them work together)**
+
+For windows it just:
+
+**Creates a new alias with the specified name and command**
+
+alias name='value'	
+
+alias k='kubectl'
+
+alias kc='k config view --minify | grep name'
+
+alias kdp='kubectl describe pod'
+
+alias krh='kubectl run --help | more'
+
+alias ugh='kubectl get --help | more'
+
+alias c='clear'
+
+alias kd='kubectl describe pod'
+
+alias ke='kubectl explain'
+
+alias kf='kubectl create -f'
+
+alias kg='kubectl get pods --show-labels'
+
+alias kr='kubectl replace -f'
+
+alias kh='kubectl --help | more'
+
+alias krh='kubectl run --help | more'
+
+alias ks='kubectl get namespaces'
+
+alias l='ls -lrt'
+
+alias ll='vi ls -rt | tail -1'
+
+alias kga='k get pod --all-namespaces'
+
+alias kgaa='kubectl get all --show-labels'
+
+
 For example, you can use ```kubectl create -f deployment.yaml``` to create a deployment using the configuration defined in the **deployment.yaml** file. Alternatively, you can use ```kubectl create deployment my-deployment --image=my-image``` to create a deployment named my-deployment using the **my-image** Docker image.
 
 ```sh
