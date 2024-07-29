@@ -275,6 +275,9 @@ alias kga='k get pod --all-namespaces'
 
 alias kgaa='kubectl get all --show-labels'
 
+**Prints all defined aliases in a reusable format**
+
+alias -p
 
 For example, you can use ```kubectl create -f deployment.yaml``` to create a deployment using the configuration defined in the **deployment.yaml** file. Alternatively, you can use ```kubectl create deployment my-deployment --image=my-image``` to create a deployment named my-deployment using the **my-image** Docker image.
 
