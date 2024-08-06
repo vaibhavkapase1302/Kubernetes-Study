@@ -18,6 +18,23 @@ USAGE:
   kubectx -V,--version          : show version
 ```
 
+```sh
+$ kubectx
+arn:aws:eks:ap-south-1:223530587197:cluster/facctum-dev-eks-cluster
+arn:aws:eks:ap-south-1:494855333795:cluster/eks-demo-cluster
+arn:aws:eks:ap-south-1:494855333795:cluster/my-eks-cluster
+arn:aws:eks:ap-south-1:891377000934:cluster/facctum-stage-eks-cluster
+arn:aws:eks:ap-south-1:891377087030:cluster/facctum-qa-eks-cluster
+arn:aws:eks:eu-west-2:533267276219:cluster/barclays-dev-eks-cluster
+arn:aws:eks:eu-west-2:905418413399:cluster/facctum-dev-eks-cluster
+docker-desktop
+```
+
+```sh
+$ kubectx arn:aws:eks:ap-south-1:891377000934:cluster/facctum-stage-eks-cluster
+✔ Switched to context "arn:aws:eks:ap-south-1:891377000934:cluster/facctum-stage-eks-cluster".
+```
+
 ### kubens
 kubens is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
 
