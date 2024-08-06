@@ -53,4 +53,8 @@ USAGE:
 
 https://k9scli.io/
 
+https://github.com/derailed/k9s
+
+
+
 
